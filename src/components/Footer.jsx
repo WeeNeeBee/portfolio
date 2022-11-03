@@ -32,9 +32,9 @@ const Footer = () => {
                         <a href = 'https://instagram.com/weng.tech'><AiFillInstagram className='s-icon' /></a>
                         <a href = 'https://linkedin.com/in/winnifred'><BsLinkedin className='s-icon' /></a>
                     </div>
-                    <p>&copy; 2022 WeeNeeBee</p>
                 </div>
             </div>
+            <p>&copy; 2022 WeeNeeBee</p>
         </footer>
     )
 }

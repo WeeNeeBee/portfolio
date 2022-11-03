@@ -3,6 +3,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import bee from '../assets/weeneebee-logo.png'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { AiFillInstagram } from 'react-icons/ai'
+// import { HiMenuAlt4 } from 'react-icons/hi'
 
 
 const NavBar = () => {
@@ -36,7 +37,9 @@ const NavBar = () => {
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
-                    {/* <span className = 'navbar-toggle-icon'></span> */}
+                    <span className = 'navbar-toggler-icon'>
+                        {/* <HiMenuAlt4 className='navbar-toggler-icon'/> */}
+                    </span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

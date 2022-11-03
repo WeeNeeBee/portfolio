@@ -38,15 +38,6 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
-.footer-weenee-brand{
-  display: flex;
-  align-items: center;
-}
-.footer-weenee-brand img{
-  width: 50px;
-  margin-left: -0.4rem !important;
-}
-
 .weenee-brand img{
   width: 50px;
   margin-left: -0.4rem !important;
@@ -165,7 +156,7 @@ span.navbar-text {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
-  padding: 18px 34px;
+  padding: 8px 15px;
   font-size: 18px;
   margin-left: 18px;
 	position: relative;
@@ -212,8 +203,8 @@ nav.navbar .navbar-toggler-icon {
 nav.navbar .navbar-toggler-icon:focus {
 	border-bottom: 2px solid #fff;
 }
-nav.navbar .navbar-toggler-icon:after,
-nav.navbar .navbar-toggler-icon:before {
+nav.navbar .navbar-toggler-icon::after,
+nav.navbar .navbar-toggler-icon::before {
 	width: 24px;
 	position: absolute;
 	height: 2px;
@@ -224,15 +215,18 @@ nav.navbar .navbar-toggler-icon:before {
 	z-index: 2;
 	transition: all 300ms linear;
 }
-nav.navbar .navbar-toggler-icon:after {
+nav.navbar .navbar-toggler-icon::after {
+  content: '';
 	top: 8px;
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  content: '';
 	transform: rotate(45deg);
 	background-color: #fff;
 	height: 2px;
 }
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  content: '';
 	transform: translateY(8px) rotate(-45deg);
 	background-color: #fff;
 	height: 2px;
@@ -244,7 +238,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 200px 0 100px 0;
   background-image: url('./assets/banner-bg.webp');
   background-position: top center;
   background-size: cover;
@@ -279,10 +273,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
   letter-spacing: 0.8px;
   border: 2px solid #e9ab17;
-  padding: 1.2rem;
+  padding: 0.7rem 0.9rem;
   transition: 0.3s ease;
 }
 
@@ -467,15 +461,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
-  font-size: 15px;
+  padding: 0 10px;
+  font-size: 14px;
   letter-spacing: 0.8px;
 }
 
 .proj-txtx button{
   color: #fff;
   border: 2px solid #fff;
-  font-size: 0.6rem;
-  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  padding: 0.4rem 0.8rem;
 }
 
 .proj-txtx button:hover {
@@ -486,7 +482,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer{
-  padding: 20px 0 50px 0;
+  padding: 20px 0 10px 0;
+}
+
+.footer-weenee-brand{
+  display: flex;
+  align-items: center;
+}
+.footer-weenee-brand img{
+  width: 50px;
+  margin-left: -0.4rem !important;
 }
 
 .footer-contact{
@@ -508,13 +513,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 14px;
   color: #B8B8B8;
   letter-spacing: 0.5px;
-  margin-top: 20px;
+  padding-top: 1rem;
+  text-align: center;
 }
 
 .footer-flex{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 @media (max-width:700px) {
@@ -522,6 +529,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .footer-flex{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+
+  .footer-weenee-brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-weenee-brand img{
+    text-align: center;
+  }
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   
 }
